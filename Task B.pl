@@ -1,3 +1,4 @@
+% Greatest common divisor
 gcd(X,X,X).
 gcd(X,Y,D):- 
 	X < Y,
@@ -6,8 +7,9 @@ gcd(X,Y,D):-
 gcd(X,Y,D):- 
 	Y < X,
 	X1 is X - Y,
-	gcd(X1,Y,D).
+	gcd(X1, Y, D).
 
-coprime(X, Y) :-
+% Checks if X and Y is coprime integers
+isCoprime(X, Y) :-
 	gcd(X, Y, D),
 	D =:= 1.
